@@ -391,6 +391,18 @@ slides[current].classList.add("active");
 
 }
 
+const banner = document.querySelector(".banner");
+
+if (banner) {
+  const bannerSlides = banner.querySelectorAll(".banner-slide");
+  let bannerCurrent = 0;
+
+  setInterval(function () {
+    bannerSlides[bannerCurrent].classList.remove("active");
+    bannerCurrent = (bannerCurrent + 1) % bannerSlides.length;
+    bannerSlides[bannerCurrent].classList.add("active");
+  }, 3000);
+}
 </script>
 
 </body>
