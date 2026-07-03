@@ -364,25 +364,17 @@ Udangudi.<br><br>
 
 </p>
 
-</footer>
 <a class="whatsapp" href="https://wa.me/918270828241">
 WhatsApp
+</a>
 <script>
-const images = [
-"IMG_20260702_180700.jpg",
-"IMG_20260702_180705.jpg",
-"IMG_20260702_180709.jpg",
-"IMG_20260702_180713.jpg",
-"IMG_20260702_180718.jpg"
-];
-
+const slides = document.querySelectorAll(".slider img");
 let index = 0;
-const img = document.querySelector(".slider img");
 
 setInterval(function () {
-  index++;
-  if (index >= images.length) index = 0;
-  img.src = images[index];
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
 }, 3000);
 
 const banner = document.querySelectorAll(".banner-slide");
