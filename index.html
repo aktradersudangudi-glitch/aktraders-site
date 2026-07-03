@@ -131,18 +131,20 @@ text-decoration:none;
 font-weight:bold;
 }
 .banner{
-position:relative;
-width:100%;
-height:420px;
-overflow:hidden;
+    position:relative;
+    width:100%;
+    height:420px;
+    overflow:hidden;
+    margin-bottom:20px;
 }
-
 .banner-slide{
-position:absolute;
-width:100%;
-height:100%;
-object-fit:cover;
-display:none;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:none;
 }
 
 .banner-slide.active{
@@ -260,7 +262,7 @@ WhatsApp Now
 
 </section>
 
-<section><section>
+<section>
 
 <h2 class="title">Featured Products</h2>
 
@@ -278,7 +280,7 @@ WhatsApp Now
 
 </div>
 
-</section><section>
+</section>
 
 <h2 class="title">Top CCTV Brands We Deal</h2>
 
@@ -365,45 +367,37 @@ Udangudi.<br><br>
 </footer>
 <a class="whatsapp" href="https://wa.me/918270828241">
 WhatsApp
-</a>
-
 <script>
+const images = [
+"IMG_20260702_180700.jpg",
+"IMG_20260702_180705.jpg",
+"IMG_20260702_180709.jpg",
+"IMG_20260702_180713.jpg",
+"IMG_20260702_180718.jpg"
+];
 
-const slider=document.querySelector(".slider");
+let index = 0;
+const img = document.querySelector(".slider img");
 
-if(slider){
+setInterval(function () {
+  index++;
+  if (index >= images.length) index = 0;
+  img.src = images[index];
+}, 3000);
 
-const slides=slider.querySelectorAll("img");
+const banner = document.querySelectorAll(".banner-slide");
+let b = 0;
 
-let current=0;
-
-slides[current].classList.add("active");
-
-setInterval(function(){
-
-slides[current].classList.remove("active");
-
-current=(current+1)%slides.length;
-
-slides[current].classList.add("active");
-
-},3000);
-
-}
-
-const banner = document.querySelector(".banner");
-
-if (banner) {
-  const bannerSlides = banner.querySelectorAll(".banner-slide");
-  let bannerCurrent = 0;
-
-  setInterval(function () {
-    bannerSlides[bannerCurrent].classList.remove("active");
-    bannerCurrent = (bannerCurrent + 1) % bannerSlides.length;
-    bannerSlides[bannerCurrent].classList.add("active");
-  }, 3000);
-}
+setInterval(function () {
+  banner[b].classList.remove("active");
+  b++;
+  if (b >= banner.length) b = 0;
+  banner[b].classList.add("active");
+}, 3000);
 </script>
+
+
+
 
 </body>
 </html>
