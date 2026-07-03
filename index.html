@@ -420,7 +420,7 @@ loading="lazy">
 <section>
 <h2 class="title">Send Enquiry</h2>
 
-<form action="https://formsubmit.co/a.k.tradersudi@email.com" method="POST">
+<form onsubmit="sendWhatsApp(); return false;">
 
 <input type="text" name="Name" placeholder="Your Name" required><br><br>
 
@@ -436,6 +436,24 @@ loading="lazy">
 
 </section>
 <script>
+function sendWhatsApp() {
+    let name = document.querySelector('input[name="Name"]').value;
+    let phone = document.querySelector('input[name="Phone"]').value;
+    let location = document.querySelector('input[name="Location"]').value;
+    let message = document.querySelector('textarea[name="Message"]').value;
+
+let text = `*New Enquiry - AK TRADERS*
+
+👤 Name: ${name}
+📞 Phone: ${phone}
+📍 Location: ${location}
+📝 Requirement: ${message}`;
+
+    window.open(
+        "https://wa.me/918270828241?text=" + encodeURIComponent(text),
+        "_blank"
+    );
+}
 const slides = document.querySelectorAll(".slider img");
 let index = 0;
 
