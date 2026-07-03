@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aktradersudangudi-glitch.github.io/aktraders-site/sitemap.xml
