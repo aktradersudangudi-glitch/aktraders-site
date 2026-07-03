@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AK TRADERS | CCTV & Security Solutions</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#000;
+color:#fff;
+}
+
+header{
+text-align:center;
+padding:25px;
+background:#111;
+border-bottom:2px solid gold;
+}
+
+header img{
+width:120px;
+margin-bottom:10px;
+}
+
+header h1{
+color:gold;
+font-size:32px;
+}
+
+header p{
+font-size:18px;
+color:#fff;
+}
+
+.hero{
+text-align:center;
+padding:40px 20px;
+}
+
+.hero h2{
+color:gold;
+font-size:36px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:25px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:#00c853;
+color:white;
+text-decoration:none;
+font-weight:bold;
+border-radius:8px;
+}
+
+section{
+padding:40px 20px;
+}
+
+.title{
+text-align:center;
+color:gold;
+font-size:34px;
+margin-bottom:25px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+border:2px solid gold;
+}
+
+.slider{
+width:100%;
+overflow:hidden;
+}
+
+.slider img{
+display:none;
+width:100%;
+border-radius:10px;
+border:2px solid gold;
+}
+
+.slider img.active{
+display:block;
+}
+
+.features p{
+padding:10px;
+border-bottom:1px solid #333;
+font-size:18px;
+}
+
+footer{
+background:#111;
+padding:30px;
+text-align:center;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#00c853;
+color:#fff;
+padding:15px 18px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<img src="logo.png">
+
+<h1>AK TRADERS</h1>
+
+<p>CCTV & Security Solutions</p>
+
+</header>
+
+<section class="hero">
+
+<h2>Your Safety, Our Responsibility</h2>
+
+<p>Professional CCTV Sales, Installation & Service</p>
+
+<a class="btn" href="https://wa.me/918270828241">WhatsApp Now</a>
+
+</section><section>
+
+<h2 class="title">Our Shop</h2>
+
+<div class="gallery">
+
+<img src="shop1.jpg">
+
+<img src="shop2.jpg">
+
+</div>
+
+</section>
+
+<section><section>
+
+<h2 class="title">Featured Products</h2>
+
+<div class="slider">
+
+<img src="IMG_20260702_180700.jpg" class="active">
+
+<img src="IMG_20260702_180705.jpg">
+
+<img src="IMG_20260702_180709.jpg">
+
+<img src="IMG_20260702_180713.jpg">
+
+<img src="IMG_20260702_180718.jpg">
+
+</div>
+
+</section><section>
+
+<h2 class="title">Top CCTV Brands We Deal</h2>
+
+<div class="features">
+
+<p>⭐ Hikvision</p>
+<p>⭐ Dahua</p>
+<p>⭐ CP Plus</p>
+<p>⭐ Uniview (UNV)</p>
+<p>⭐ Prama Hikvision</p>
+<p>⭐ Optivue</p>
+<p>⭐ Zebronics</p>
+<p>⭐ COFE</p>
+<p>⭐ Trueview</p>
+<p>⭐ TVT</p>
+<p>⭐ Hi-Focus</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Why Choose AK TRADERS?</h2>
+
+<div class="features">
+
+<p>✔ Genuine Products</p>
+<p>✔ Professional Installation</p>
+<p>✔ Free Site Visit</p>
+<p>✔ Warranty Support</p>
+<p>✔ After Sales Support</p>
+<p>✔ Home, Office & Factory Security Solutions</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2 style="color:gold;">Contact Us</h2>
+
+<p>
+
+📍 <b>Tiruchendur Branch</b><br><br>
+
+AK TRADERS<br>
+
+Tirunelveli Main Road,<br>
+
+Royal Enfield Showroom 1st Floor,<br>
+
+Tiruchendur.<br><br>
+
+<a href="https://maps.app.goo.gl/p2AnB1osWqDSXHJC8?g_st=ac" target="_blank" class="btn">
+📍 Get Directions
+</a>
+
+<br><br><br>
+
+📍 <b>Udangudi Branch</b><br><br>
+
+AK TRADERS<br>
+
+S.R. Complex,<br>
+
+Near Bus Stand,<br>
+
+Udangudi.<br><br>
+
+<a href="https://maps.app.goo.gl/CaypApCauR7LSeez9?g_st=ac" target="_blank" class="btn">
+📍 Get Directions
+</a>
+
+<br><br><br>
+
+📞 8270828241<br>
+📞 8270828243<br>
+📞 8270828246<br>
+📞 8270828229
+
+</p>
+
+</footer>
+<a class="whatsapp" href="https://wa.me/918270828241">
+WhatsApp
+</a>
+
+<script>
+
+const slider=document.querySelector(".slider");
+
+if(slider){
+
+const slides=slider.querySelectorAll("img");
+
+let current=0;
+
+slides[current].classList.add("active");
+
+setInterval(function(){
+
+slides[current].classList.remove("active");
+
+current=(current+1)%slides.length;
+
+slides[current].classList.add("active");
+
+},3000);
+
+}
+
+</script>
+
+</body>
+</html>
