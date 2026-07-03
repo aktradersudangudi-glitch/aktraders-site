@@ -200,6 +200,17 @@ opacity:1;
 from{opacity:.4;}
 to{opacity:1;}
 }
+form input,
+form textarea{
+width:100%;
+padding:12px;
+margin-bottom:10px;
+background:#111;
+color:#fff;
+border:1px solid gold;
+border-radius:8px;
+box-sizing:border-box;
+}
 </style>
 </head>
 
@@ -404,6 +415,24 @@ style="border:2px solid gold;border-radius:10px;"
 allowfullscreen=""
 loading="lazy">
 </iframe>
+
+</section>
+<section>
+<h2 class="title">Send Enquiry</h2>
+
+<form action="https://formsubmit.co/a.k.tradersudi@email.com" method="POST">
+
+<input type="text" name="Name" placeholder="Your Name" required><br><br>
+
+<input type="tel" name="Phone" placeholder="Mobile Number" required><br><br>
+
+<input type="text" name="Location" placeholder="Location"><br><br>
+
+<textarea name="Message" placeholder="Your Requirement" rows="5"></textarea><br><br>
+
+<button class="btn" type="submit">Send Enquiry</button>
+
+</form>
 
 </section>
 <script>
