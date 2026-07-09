@@ -635,7 +635,8 @@ z-index:999;
 <label><input type="checkbox" class="check"> Regular Service Done</label><br><br>
 
 <button class="btn" onclick="checkSecurity()">Check My Score</button>
-
+<br><br>
+<button class="btn" onclick="downloadReport()">📄 Download Security Report (PDF)</button>
 <h3 id="score" style="margin-top:20px;color:gold;"></h3>
 
 </div>
@@ -663,6 +664,22 @@ document.getElementById("score").innerHTML=
 "Score : "+checked+" / "+total+"<br><br>"+result+
 '<br><br><a class="btn" href="https://wa.me/918270828241?text=I%20need%20a%20FREE%20Security%20Health%20Check">📲 Book FREE Site Visit</a>';
 
+}
+async function downloadReport() {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+
+  const checked = document.querySelectorAll(".check:checked").length;
+  const total = document.querySelectorAll(".check").length;
+
+  doc.setFontSize(18);
+  doc.text("AK TRADERS", 20, 20);
+  doc.setFontSize(14);
+  doc.text("Free Security Health Check Report", 20, 35);
+  doc.setFontSize(12);
+  doc.text("Score: " + checked + " / " + total, 20, 50);
+
+  doc.save("AK_TRADERS_Security_Report.pdf");
 }
 </script>
 <section>
